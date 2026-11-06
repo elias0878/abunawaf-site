@@ -34,5 +34,43 @@
       "sizes": "any",
       "type": "image/svg+xml"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "محادثة واتساب",
+      "short_name": "واتساب",
+      "description": "تواصل مباشر عبر واتساب +966572851032",
+      "url": "https://wa.me/966572851032",
+      "icons": [
+        {
+          "src": "/assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "تيليجرام",
+      "short_name": "تيليجرام",
+      "description": "القناة الرسمية على تيليجرام",
+      "url": "https://t.me/KSA_hack01",
+      "icons": [
+        {
+          "src": "/assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "الأدلة",
+      "short_name": "الأدلة",
+      "description": "أدلة عملية في الأمن السيبراني",
+      "url": "/guides/",
+      "icons": [
+        {
+          "src": "/assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
   ]
 }
