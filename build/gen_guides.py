@@ -10,7 +10,7 @@ GUIDE_BY_SLUG = {g["slug"]: g for g in GUIDES}
 
 def build_index():
     path = "/guides/index.html"
-    url = BASE + path
+    url = BASE + "/guides/"      # ← الشكل المعتمد (trailingSlash) لا index.html
 
     items = []
     for g in GUIDES:
@@ -61,6 +61,7 @@ def build_index():
         breadcrumb=[("الرئيسية", BASE + "/"), ("الأدلة", url)],
         og_image="og-guides.jpg",
         active="/guides/",
+        url_override=BASE + "/guides/",
     )
     write(path, html)
 

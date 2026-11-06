@@ -123,12 +123,12 @@ def schema_faq(pairs, page_url):
 # ─────────────────────────── القالب الرئيسي ───────────────────────────
 def page(*, path, title, desc, h1, body, schema_graph, breadcrumb=None,
          og_image="og-default.jpg", og_type="website", noindex=False,
-         extra_head="", keywords=None, container=True, active="/"):
+         extra_head="", keywords=None, container=True, active="/", url_override=None):
     """
     path      : مسار الصفحة من الجذر، مثل "/pages/services.html"
     schema_graph: قائمة كيانات (بدون @context) تُدمج مع Organization و WebSite
     """
-    url = BASE + path
+    url = url_override or (BASE + path)
     robots = ("noindex, follow" if noindex else
               "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1")
 
