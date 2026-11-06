@@ -1,4 +1,4 @@
 Contact: https://t.me/KSA_hack01
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: ar, en
-Canonical: https://ant.xo.je/.well-known/security.txt
+Canonical: https://abunawaf.vercel.app/.well-known/security.txt

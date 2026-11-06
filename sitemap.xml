@@ -3,274 +3,274 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://ant.xo.je/</loc>
+    <loc>https://abunawaf.vercel.app/</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/services.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/services.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/services.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/services.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/</loc>
+    <loc>https://abunawaf.vercel.app/guides/</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/problems.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/problems.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/problems.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/problems.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/problems.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/problems.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/about.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/about.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/about.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/contact.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/contact.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/contact.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/privacy.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/privacy.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/privacy.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/pages/terms.html</loc>
+    <loc>https://abunawaf.vercel.app/pages/terms.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/pages/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/pages/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/pages/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/pages/terms.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-default.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-default.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/recover-stolen-account.html</loc>
+    <loc>https://abunawaf.vercel.app/services/recover-stolen-account.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/recover-stolen-account.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/recover-stolen-account.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/recover-stolen-account.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/recover-stolen-account.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/recover-suspended-account.html</loc>
+    <loc>https://abunawaf.vercel.app/services/recover-suspended-account.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/recover-suspended-account.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/recover-suspended-account.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/recover-suspended-account.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/recover-suspended-account.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/anti-blackmail.html</loc>
+    <loc>https://abunawaf.vercel.app/services/anti-blackmail.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/anti-blackmail.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/anti-blackmail.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/anti-blackmail.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/anti-blackmail.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/osint-identity.html</loc>
+    <loc>https://abunawaf.vercel.app/services/osint-identity.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/osint-identity.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/osint-identity.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/osint-identity.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/osint-identity.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/deceased-account.html</loc>
+    <loc>https://abunawaf.vercel.app/services/deceased-account.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/deceased-account.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/deceased-account.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/deceased-account.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/deceased-account.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/security-audit.html</loc>
+    <loc>https://abunawaf.vercel.app/services/security-audit.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/security-audit.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/security-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/security-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/security-audit.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/account-protection.html</loc>
+    <loc>https://abunawaf.vercel.app/services/account-protection.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/account-protection.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/account-protection.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/account-protection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/account-protection.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/services/consulting.html</loc>
+    <loc>https://abunawaf.vercel.app/services/consulting.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/services/consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/services/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/services/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/services/consulting.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-services.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-services.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/first-hour-after-account-hack.html</loc>
+    <loc>https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/first-hour-after-account-hack.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/first-hour-after-account-hack.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/signs-your-snapchat-is-hacked.html</loc>
+    <loc>https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/signs-your-snapchat-is-hacked.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/signs-your-snapchat-is-hacked.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/two-factor-authentication-guide.html</loc>
+    <loc>https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/two-factor-authentication-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/two-factor-authentication-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/protect-photos-exif-location.html</loc>
+    <loc>https://abunawaf.vercel.app/guides/protect-photos-exif-location.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/protect-photos-exif-location.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/protect-photos-exif-location.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/protect-photos-exif-location.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/protect-photos-exif-location.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ant.xo.je/guides/saudi-cybercrime-report-guide.html</loc>
+    <loc>https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://ant.xo.je/guides/saudi-cybercrime-report-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ant.xo.je/guides/saudi-cybercrime-report-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html"/>
     <image:image>
-      <image:loc>https://ant.xo.je/assets/images/og-guides.jpg</image:loc>
+      <image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc>
       <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>

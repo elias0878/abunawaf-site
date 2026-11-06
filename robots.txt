@@ -1,5 +1,5 @@
 # robots.txt — فريق أبو نواف للأمن السيبراني
-# https://ant.xo.je/
+# https://abunawaf.vercel.app/
 # آخر تحديث: 2026-11-06
 
 User-agent: *
@@ -69,4 +69,4 @@ Allow: /
 User-agent: SemrushBot
 Allow: /
 
-Sitemap: https://ant.xo.je/sitemap.xml
+Sitemap: https://abunawaf.vercel.app/sitemap.xml

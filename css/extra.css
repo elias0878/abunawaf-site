@@ -396,3 +396,304 @@ section.container { padding-top: 44px !important; }
     .hero::before, .hero::after, .wa-float::after { animation: none; }
     .btn, .social-btn, .why-card, .svc-card, .wa-float { transition: none; }
 }
+
+/* ============================================================
+   أزرار التواصل الكاملة + بطاقات القنوات + شريط الجوال
+   أُضيفت 2026-11-06
+   ============================================================ */
+
+/* زر المشاركة (button لا رابط) */
+.social-btn { cursor: pointer; border: 0; padding: 0; font: inherit; }
+.social-share { background: transparent; }
+
+/* كتلة الأيقونات الصغيرة في الفوتر */
+.social-icons-sm { gap: 9px; }
+.social-icons-sm .social-btn { width: 34px; height: 34px; }
+
+/* ── قسم قنوات التواصل ── */
+.channels-section {
+    padding: 64px 0 56px;
+    background: linear-gradient(180deg, #f8fafc 0%, #eff4fa 100%);
+    border-bottom: 1px solid #e2e8f0;
+}
+.channels-section h2 {
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    font-weight: 900;
+    color: #0f2438;
+    margin: 0 0 10px;
+    text-align: center;
+    letter-spacing: -.3px;
+}
+.ch-lead {
+    max-width: 62ch;
+    margin: 0 auto 34px;
+    text-align: center;
+    color: #5b6b7f;
+    font-size: .97rem;
+    line-height: 1.85;
+}
+.ch-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+}
+.ch-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 15px 16px;
+    text-decoration: none;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    position: relative;
+    overflow: hidden;
+}
+.ch-card::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--brand, #1a365d);
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+.ch-card:hover, .ch-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--brand, #1a365d);
+    box-shadow: 0 14px 34px rgba(15,36,56,.13);
+}
+.ch-card:hover::before, .ch-card:focus-visible::before { opacity: 1; }
+.ch-icon {
+    flex-shrink: 0;
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    display: grid; place-items: center;
+    background: color-mix(in srgb, var(--brand, #1a365d) 12%, #fff);
+    color: var(--brand, #1a365d);
+    border: 1.5px solid color-mix(in srgb, var(--brand, #1a365d) 26%, #fff);
+}
+.ch-card[style*="FFFC00"] .ch-icon { background: #fffde6; border-color: #e8e400; color: #a8a200; }
+.ch-card[style*="010101"] .ch-icon,
+.ch-card[style*="000000"] .ch-icon,
+.ch-card[style*="24292F"] .ch-icon { background: #eef1f4; border-color: #d6dce3; color: #111; }
+.ch-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ch-name { font-weight: 800; color: #0f2438; font-size: .95rem; }
+.ch-handle {
+    font-size: .82rem;
+    color: #2c5282;
+    font-weight: 700;
+    direction: ltr;
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ch-note { font-size: .76rem; color: #8494a6; line-height: 1.5; }
+.ch-note-bottom {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin: 26px auto 0; max-width: 60ch;
+    font-size: .84rem; color: #64748b; text-align: center;
+}
+.ch-note-bottom svg { color: #2f855a; flex-shrink: 0; }
+
+/* ── شريط التواصل السفلي للجوال ── */
+.m-dock {
+    display: none;
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 900;
+    background: rgba(11,26,42,.97);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 -8px 26px rgba(0,0,0,.3);
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+.m-dock-btn {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 4px;
+    padding: 8px 4px;
+    border-radius: 11px;
+    text-decoration: none;
+    color: #fff;
+    font-size: .74rem;
+    font-weight: 800;
+    min-height: 52px;
+    transition: background .15s ease;
+}
+.m-dock-btn svg { flex-shrink: 0; }
+.m-dock-wa { background: #1f9d55; }
+.m-dock-tg { background: #1e7fb8; }
+.m-dock-call { background: #26364a; }
+.m-dock-btn:active { transform: scale(.97); }
+.m-dock-btn:focus-visible { outline: 3px solid #d6b256; outline-offset: 2px; }
+
+@media (max-width: 768px) {
+    .m-dock { display: grid; }
+    body { padding-bottom: 78px; }
+    .wa-float { bottom: 88px; }         /* حتى لا يتعارض مع الشريط */
+    .scroll-top { bottom: 88px; }
+    .ch-grid { grid-template-columns: 1fr; }
+    .channels-section { padding: 46px 0 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ch-card, .social-btn, .m-dock-btn { transition: none; }
+}
+
+/* ============================================================
+   شريط التواصل الثابت تحت التنقل — ظاهر دائماً وفوق الطية
+   ============================================================ */
+:root { --socialbar-h: 56px; }
+
+body { padding-top: var(--socialbar-h); }
+
+.socialbar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    height: var(--socialbar-h);
+    z-index: 999;
+    background: linear-gradient(90deg, #0b1a2a 0%, #14293f 60%, #1a3a54 100%);
+    border-bottom: 1px solid rgba(255,255,255,.10);
+    box-shadow: 0 4px 14px rgba(6,18,30,.22);
+}
+.socialbar-inner {
+    max-width: var(--container-max, 1200px);
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+}
+.socialbar-slot { display: flex; align-items: center; flex-shrink: 0; }
+
+/* مؤشر الحالة: يُنقل إلى الشريط عبر JS، ويُخفى افتراضياً لمن لا يملك JS */
+.status-indicator { display: none; }
+.socialbar .status-indicator {
+    display: flex;
+    position: static;
+    background: rgba(47,133,90,.20);
+    color: #8ef0bb;
+    border: 1px solid rgba(142,240,187,.35);
+    box-shadow: none;
+    padding: 5px 12px;
+    font-size: .74rem;
+    font-weight: 800;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.socialbar .status-indicator.offline {
+    background: rgba(229,62,62,.18);
+    color: #ffb3b3;
+    border-color: rgba(255,179,179,.35);
+}
+.socialbar .status-dot {
+    width: 7px; height: 7px;
+    box-shadow: 0 0 0 3px rgba(142,240,187,.18);
+}
+
+.socialbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2px;
+}
+.socialbar-icons::-webkit-scrollbar { display: none; }
+
+.social-btn-bar {
+    width: 34px; height: 34px;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.14);
+    color: rgba(255,255,255,.92);
+    transition: transform .16s ease, background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+.social-btn-bar:hover,
+.social-btn-bar:focus-visible {
+    background: var(--brand, #d6b256);
+    border-color: var(--brand, #d6b256);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.34);
+    outline: none;
+}
+.social-btn-bar[style*="FFFC00"]:hover,
+.social-btn-bar[style*="FFFC00"]:focus-visible { color: #111; }
+.social-btn-bar[style*="010101"]:hover,
+.social-btn-bar[style*="24292F"]:hover { background: #fff; color: #111; border-color: #fff; }
+.social-btn-bar:focus-visible { outline: 2px solid #d6b256; outline-offset: 2px; }
+
+.socialbar-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex: 0 0 auto;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: #1f9d55;
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: background .16s ease, transform .16s ease;
+}
+.socialbar-cta:hover { background: #17864a; transform: translateY(-2px); }
+.socialbar-cta:focus-visible { outline: 3px solid #d6b256; outline-offset: 2px; }
+
+/* طبقة قائمة الجوال والحاوية: تُزاح لأسفل بمقدار الشريط */
+.mobile-overlay { top: calc(var(--navbar-height) + var(--socialbar-h)); }
+.nav-links { top: calc(var(--navbar-height) + var(--socialbar-h)); }
+
+@media (max-width: 900px) {
+    .socialbar-cta span { display: none; }
+    .socialbar-cta { padding: 8px 11px; }
+}
+
+@media (max-width: 768px) {
+    :root { --socialbar-h: 50px; }
+    .nav-links { height: calc(100vh - var(--navbar-height) - var(--socialbar-h)); }
+    .socialbar-inner { padding: 0 10px; gap: 8px; justify-content: flex-start; }
+    .socialbar .status-indicator { display: none; }     /* مساحة أضيق */
+    .socialbar-icons { gap: 5px; flex: 1 1 auto; }
+    .social-btn-bar { width: 32px; height: 32px; border-radius: 9px; }
+    .social-btn-bar svg { width: 16px; height: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-btn-bar, .socialbar-cta { transition: none; }
+}
+
+/* ── تصحيحات بعد اختبار المتصفح ── */
+@media (max-width: 768px) {
+    /* شريط التواصل: تُخفى زر «تواصل مباشر» لأن الشريط السفلي يغطي واتساب */
+    .socialbar-cta { display: none; }
+    .socialbar-icons { gap: 4px; justify-content: space-between; flex: 1 1 auto; }
+    .social-btn-bar { width: 30px; height: 30px; border-radius: 8px; }
+    .social-btn-bar svg { width: 15px; height: 15px; }
+    /* زر واتساب العائم مكرّر مع الشريط السفلي */
+    .wa-float { display: none; }
+}
+
+/* زر العودة للأعلى: إلى اليمين حتى لا يتعارض مع زر واتساب العائم */
+.scroll-top { left: auto; right: 30px; }
+@media (max-width: 768px) { .scroll-top { right: 16px; bottom: 88px; } }
+
+/* ── إزاحة التمرير للروابط الداخلية بسبب الشرائط الثابتة ── */
+html { scroll-padding-top: calc(var(--navbar-height) + var(--socialbar-h) + 14px); }
+section[id], .channels-section, [id="faq"] { scroll-margin-top: calc(var(--navbar-height) + var(--socialbar-h) + 14px); }

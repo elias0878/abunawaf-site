@@ -7,7 +7,7 @@
 /* SITE */
     اللغة: العربية
     آخر تحديث: 2026-11-06
-    الموقع: https://ant.xo.je
+    الموقع: https://abunawaf.vercel.app
     المعايير: HTML5 · CSS3 · ES6 · Schema.org · WCAG AA
 
 /* NOTE */

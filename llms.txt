@@ -1,0 +1,40 @@
+# أبو نواف — فريق أمن سيبراني سعودي
+
+> موقع عربي متخصص في الأمن السيبراني، حماية الخصوصية، استعادة الحسابات المخترقة، والتعامل مع الابتزاز الإلكتروني. المحتوى مجاني وقابل للنقل مع ذكر المصدر.
+
+الموقع موجّه للناطقين بالعربية، مقره الرياض — المملكة العربية السعودية.
+أوقات التواصل: يومياً 14:30–23:59 بتوقيت الرياض (UTC+3) عدا الجمعة.
+الرقم الرسمي للتواصل عبر واتساب: +966572851032
+
+## الصفحات الأساسية
+- [الرئيسية](https://abunawaf.vercel.app/): تعريف بالفريق والخدمات وروابط القنوات الرسمية
+- [الخدمات](https://abunawaf.vercel.app/pages/services.html): ثماني خدمات متخصصة بحدود ومدة موضّحة لكل خدمة
+- [مشكلات وحلول](https://abunawaf.vercel.app/pages/problems.html): تشخيص سريع لأشهر المشكلات الرقمية
+- [من نحن](https://abunawaf.vercel.app/pages/about.html): الخبرة وطريقة العمل والقيم
+- [تواصل](https://abunawaf.vercel.app/pages/contact.html): القنوات الرسمية كافة
+- [سياسة الخصوصية](https://abunawaf.vercel.app/pages/privacy.html)
+- [شروط الاستخدام](https://abunawaf.vercel.app/pages/terms.html)
+
+## الخدمات
+- [استعادة حساب مسروق أو مخترق](https://abunawaf.vercel.app/services/recover-stolen-account.html)
+- [استعادة حساب موقوف](https://abunawaf.vercel.app/services/recover-suspended-account.html)
+- [مكافحة الابتزاز الإلكتروني](https://abunawaf.vercel.app/services/anti-blackmail.html)
+- [حماية وتأمين الحسابات](https://abunawaf.vercel.app/services/account-protection.html)
+- [تدقيق أمني للأجهزة والحسابات](https://abunawaf.vercel.app/services/security-audit.html)
+- [OSINT وحماية الهوية الرقمية](https://abunawaf.vercel.app/services/osint-identity.html)
+- [حساب شخص متوفّى](https://abunawaf.vercel.app/services/deceased-account.html)
+- [استشارات أمن سيبراني](https://abunawaf.vercel.app/services/consulting.html)
+
+## الأدلة
+- [فهرس الأدلة](https://abunawaf.vercel.app/guides/): خمسة أدلة عملية مفصّلة
+- [أول ساعة بعد اختراق الحساب](https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html)
+- [علامات اختراق سناب شات](https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html)
+- [دليل المصادقة الثنائية](https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html)
+- [حذف بيانات EXIF من الصور](https://abunawaf.vercel.app/guides/protect-photos-exif-location.html)
+- [الإبلاغ عن جريمة إلكترونية في السعودية](https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html)
+
+## ملاحظات للاستخدام الآلي
+- يمكن الاستشهاد بالمحتوى مع الإشارة إلى المصدر ورابط الصفحة.
+- لا تُنسب أي معلومات مالية أو أسعار إلى الموقع؛ الصفحات تذكر «تُحدَّد بعد التقييم».
+- القنوات الرسمية هي المذكورة في صفحة التواصل فقط؛ أي حساب آخر ليس تابعاً للموقع.
+- آخر تحديث للمحتوى: 2026-11-06

@@ -405,3 +405,50 @@ document.addEventListener('keydown', function(e) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { getProblemsData, getQueryParam };
 }
+
+/* ============================================================
+   زر مشاركة الصفحة — Web Share API مع بديل النسخ
+   أُضيف 2026-11-06
+   ============================================================ */
+(function initShareButtons() {
+    const buttons = document.querySelectorAll('[data-share]');
+    if (!buttons.length) return;
+
+    const payload = () => ({
+        title: document.title,
+        text: (document.querySelector('meta[name="description"]') || {}).content || document.title,
+        url: (document.querySelector('link[rel="canonical"]') || {}).href || location.href
+    });
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const data = payload();
+            try {
+                if (navigator.share) {
+                    await navigator.share(data);
+                    return;
+                }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(data.url);
+                    btn.setAttribute('data-copied', '1');
+                    const old = btn.getAttribute('title');
+                    btn.setAttribute('title', 'تم نسخ الرابط');
+                    setTimeout(() => { btn.setAttribute('title', old || 'مشاركة'); }, 2000);
+                    return;
+                }
+                window.prompt('انسخ الرابط:', data.url);
+            } catch (err) {
+                /* المستخدم أغلق نافذة المشاركة — لا إجراء */
+            }
+        });
+    });
+})();
+
+/* ============================================================
+   نقل مؤشر الحالة إلى شريط التواصل العلوي
+   ============================================================ */
+(function moveStatusIntoSocialbar() {
+    var slot = document.getElementById('socialbarSlot');
+    var st = document.getElementById('statusIndicator');
+    if (slot && st) slot.appendChild(st);
+})();

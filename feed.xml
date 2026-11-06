@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>أدلة أبو نواف — الأمن السيبراني وحماية الخصوصية</title>
+    <link>https://abunawaf.vercel.app/guides/</link>
+    <atom:link href="https://abunawaf.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>أدلة عملية مجانية في الأمن السيبراني، حماية الحسابات، والخصوصية الرقمية.</description>
+    <language>ar</language>
+    <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0300</lastBuildDate>
+    <image>
+      <url>https://abunawaf.vercel.app/assets/images/icon-512.png</url>
+      <title>أدلة أبو نواف</title>
+      <link>https://abunawaf.vercel.app/guides/</link>
+    </image>
+  <item>
+    <title>ماذا تفعل في أول ساعة بعد اختراق حسابك؟</title>
+    <link>https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html</link>
+    <guid isPermaLink="true">https://abunawaf.vercel.app/guides/first-hour-after-account-hack.html</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0300</pubDate>
+    <description>ترتيب صحيح للخطوات في أول 60 دقيقة، مع تحذيرات من الأخطاء التي تُغلق مسارات الاستعادة.</description>
+    <language>ar</language>
+  </item>
+  <item>
+    <title>7 علامات تدل أن حساب سناب شات مخترق</title>
+    <link>https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html</link>
+    <guid isPermaLink="true">https://abunawaf.vercel.app/guides/signs-your-snapchat-is-hacked.html</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0300</pubDate>
+    <description>العلامات السبع الفعلية للاختراق الصامت على سناب شات وكيف تتحقق من كل واحدة.</description>
+    <language>ar</language>
+  </item>
+  <item>
+    <title>المصادقة الثنائية: دليل التركيب الصحيح</title>
+    <link>https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html</link>
+    <guid isPermaLink="true">https://abunawaf.vercel.app/guides/two-factor-authentication-guide.html</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0300</pubDate>
+    <description>أنواع المصادقة الثنائية وأيها تختار، وكيف تركّبها دون قفل نفسك خارج الحساب.</description>
+    <language>ar</language>
+  </item>
+  <item>
+    <title>صورك تكشف موقعك: كيف تحذف بيانات EXIF</title>
+    <link>https://abunawaf.vercel.app/guides/protect-photos-exif-location.html</link>
+    <guid isPermaLink="true">https://abunawaf.vercel.app/guides/protect-photos-exif-location.html</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0300</pubDate>
+    <description>ما هي بيانات EXIF، وكيف تتحقق من صورك، وكيف تزيلها قبل النشر على أي منصة.</description>
+    <language>ar</language>
+  </item>
+  <item>
+    <title>كيف تُبلغ عن جريمة إلكترونية في السعودية؟</title>
+    <link>https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html</link>
+    <guid isPermaLink="true">https://abunawaf.vercel.app/guides/saudi-cybercrime-report-guide.html</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0300</pubDate>
+    <description>المسار الرسمي للإبلاغ عن الابتزاز والاختراق، والأدلة التي تجعل البلاغ فعّالاً.</description>
+    <language>ar</language>
+  </item>
+  </channel>
+</rss>

@@ -1,5 +1,4 @@
-.DS_Store
+build/
+*.bak
+__pycache__/
 node_modules/
-.vercel
-*.log
-build/__pycache__/
