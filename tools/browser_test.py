@@ -11,7 +11,8 @@ from playwright.sync_api import sync_playwright
 
 ROOT = "/home/user/site"
 OUT = "/home/user/site/build"
-PORT = 8144
+import random as _r
+PORT = _r.randint(8300, 8900)
 import random
 os.makedirs(OUT, exist_ok=True)
 
@@ -24,6 +25,7 @@ class H(http.server.SimpleHTTPRequestHandler):
         pass
 
 
+socketserver.TCPServer.allow_reuse_address = True
 srv = socketserver.TCPServer(("127.0.0.1", PORT), H)
 threading.Thread(target=srv.serve_forever, daemon=True).start()
 BASE = f"http://127.0.0.1:{PORT}"
@@ -83,7 +85,14 @@ with sync_playwright() as p:
                         return d ? getComputedStyle(d).display !== 'none' : false;
                     })(),
                     h1: document.querySelectorAll('h1').length,
-                    overflowX: document.documentElement.scrollWidth > window.innerWidth + 1,
+                    overflowX: (() => {
+                        const de = document.documentElement;
+                        const oy = de.style.overflowY;
+                        de.style.overflowY = 'hidden';   // استثناء شريط التمرير الرأسي في RTL
+                        const over = de.scrollWidth > de.clientWidth + 1;
+                        de.style.overflowY = oy;
+                        return over;
+                    })(),
                     title: document.title.length,
                 };
             }""")
@@ -132,11 +141,10 @@ with sync_playwright() as p:
     }""")
     print(f"✓ {vis} أيقونة تواصل داخل الشاشة الأولى (1440×900)")
 
-    # بطاقات القنوات
-    cards = page.eval_on_selector_all(".ch-card", "els => els.length")
-    print(f"✓ {cards} بطاقة قنوات في قسم «قنوات التواصل الرسمية»")
-    page.click("#channels", position={"x": 5, "y": 5}) if False else None
-    page.evaluate("document.querySelector('#channels').scrollIntoView()")
+    # بطاقات الحسابات الرسمية (تصميم الموقع الأصلي)
+    cards = page.eval_on_selector_all(".social-card", "els => els.length")
+    print(f"✓ {cards} بطاقة حسابات رسمية في قسم «حسابات أبو نواف الرسمية»")
+    page.evaluate("document.querySelector('#social-top')?.scrollIntoView()")
     page.wait_for_timeout(500)
     page.screenshot(path=f"{OUT}/shot-channels.png")
     ctx.close()

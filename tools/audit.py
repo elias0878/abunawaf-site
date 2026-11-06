@@ -19,7 +19,7 @@ def E(f, m): errors.append(f"[{f}] {m}")
 def W(f, m): warnings.append(f"[{f}] {m}")
 
 
-SKIP = ("/tools/", "/.git/", "/pages/tools.html")   # tools.html صفحة تحويل noindex
+SKIP = ("/tools/", "/.git/")
 files = [f for f in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True)
          if not any(x in f for x in SKIP)]
 
@@ -163,7 +163,7 @@ for u in locs:
     if rel.endswith("/"): rel += "index.html"
     if rel not in exist: E("sitemap", f"عنوان لصفحة غير موجودة: {u}")
 for f in exist:
-    if f == "404.html" or f.startswith("pages/tools"): continue
+    if f == "404.html": continue
     u = D + "/" + ("" if f == "index.html" else f)
     if f.endswith("/index.html"): u = D + "/" + f[:-10]
     if u not in locs: W("sitemap", f"صفحة غير مُدرجة: {f}")

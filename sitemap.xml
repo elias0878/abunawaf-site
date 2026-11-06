@@ -275,4 +275,11 @@
       <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://abunawaf.vercel.app/pages/tools.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://abunawaf.vercel.app/assets/images/og-guides.jpg</image:loc></image:image>
+  </url>
 </urlset>

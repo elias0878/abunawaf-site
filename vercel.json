@@ -168,12 +168,7 @@
     },
     {
       "source": "/tools.html",
-      "destination": "/pages/services.html",
-      "permanent": true
-    },
-    {
-      "source": "/pages/tools.html",
-      "destination": "/pages/services.html",
+      "destination": "/pages/tools.html",
       "permanent": true
     }
   ]

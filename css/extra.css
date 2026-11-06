@@ -697,3 +697,50 @@ body { padding-top: var(--socialbar-h); }
 /* ── إزاحة التمرير للروابط الداخلية بسبب الشرائط الثابتة ── */
 html { scroll-padding-top: calc(var(--navbar-height) + var(--socialbar-h) + 14px); }
 section[id], .channels-section, [id="faq"] { scroll-margin-top: calc(var(--navbar-height) + var(--socialbar-h) + 14px); }
+
+/* ============================================================
+   توافق مع تصميم الموقع الأصلي + أزرار واتساب/تيليجرام
+   ============================================================ */
+.btn-whatsapp { background: #1f9d55; color: #fff; border-color: #1f9d55; }
+.btn-whatsapp:hover { background: #17864a; border-color: #17864a; color: #fff; transform: translateY(-2px); }
+.btn-telegram { background: #1e7fb8; color: #fff; border-color: #1e7fb8; }
+.btn-telegram:hover { background: #186a9b; border-color: #186a9b; color: #fff; transform: translateY(-2px); }
+
+.social-icon.whatsapp { background: #25d366; color: #fff; }
+.social-card-wa { border-color: #25d366; box-shadow: 0 10px 26px rgba(37,211,102,.22); }
+
+.footer-social-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.footer-social-bar > span {
+    color: rgba(255,255,255,.82);
+    font-weight: 800;
+    font-size: .92rem;
+}
+.footer-social-bar .social-icons { justify-content: flex-start; }
+
+/* الشريط العلوي لا يغطي هيرو الصفحة الأصلية */
+.hero, .page-header { scroll-margin-top: calc(var(--navbar-height) + var(--socialbar-h)); }
+
+/* أدوات الصفحة الأصلية: تمرير سلس للبطاقات الطويلة */
+.tools-grid .tool-card { height: 100%; }
+
+/* منع أي تجاوز أفقي في الهيرو (تصميم الأصل يستخدم عرض 100% للأزرار) */
+.hero-actions { max-width: 100%; }
+.hero-actions .btn { box-sizing: border-box; max-width: 100%; }
+@media (max-width: 768px) {
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+    .hero-actions .btn-lg { width: 100%; }
+    .hero-content { padding-inline: 0; }
+}
+
+/* منع شريط التمرير الأفقي في RTL: العناصر الثابتة تمتد على عرض النافذة
+   بينما منطقة التخطيط تستثني شريط التمرير الرأسي (8px) */
+html { overflow-x: hidden; }
