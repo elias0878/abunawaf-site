@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/(.*)",
@@ -97,11 +97,6 @@
       "source": "/services/",
       "destination": "/pages/services.html",
       "permanent": false
-    },
-    {
-      "source": "/guides",
-      "destination": "/guides/",
-      "permanent": true
     },
     {
       "source": "/pages/services",
