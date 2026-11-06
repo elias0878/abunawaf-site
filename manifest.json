@@ -1,0 +1,38 @@
+{
+  "id": "https://ant.xo.je/",
+  "name": "فريق أبو نواف للأمن السيبراني",
+  "short_name": "ابونواف",
+  "description": "أمن سيبراني وحماية خصوصية: استعادة الحسابات، مكافحة الابتزاز، وتأمين الحسابات.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f2438",
+  "theme_color": "#1a365d",
+  "categories": [
+    "security",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

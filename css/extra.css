@@ -1,0 +1,163 @@
+/* ============================================================
+   extra.css — أنماط الصفحات الجديدة (خدمات / أدلة / من نحن)
+   يُضاف إلى main.css ولا يستبدله.
+   ============================================================ */
+
+/* ── مسار التنقل ── */
+.crumbs {
+    background: #f4f7fb;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 14px 0;
+    font-size: .9rem;
+}
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.crumbs li { display: flex; align-items: center; gap: 8px; color: #64748b; }
+.crumbs li + li::before { content: "‹"; color: #cbd5e1; font-weight: 700; }
+.crumbs a { color: #1a365d; text-decoration: none; font-weight: 600; }
+.crumbs a:hover { color: #d6b256; text-decoration: underline; }
+.crumbs [aria-current] { color: #475569; font-weight: 700; }
+
+/* ── رأس صفحة داخلية ── */
+.page-head {
+    background: linear-gradient(135deg, #0f2438 0%, #1a365d 60%, #2c5282 100%);
+    color: #fff;
+    padding: 64px 0 56px;
+    position: relative;
+    overflow: hidden;
+}
+.page-head::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 56px 56px; pointer-events: none;
+}
+.page-head .container { position: relative; z-index: 1; }
+.page-head h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.25; margin: 0 0 16px; color: #fff; }
+.page-head .lead { font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.85; color: rgba(255,255,255,.85); max-width: 76ch; margin: 0; }
+.page-head .tag {
+    display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .4px;
+    color: #d6b256; border: 1.5px solid rgba(214,178,86,.55);
+    border-radius: 999px; padding: 6px 18px; margin-bottom: 20px;
+}
+
+/* ── جسم المقال ── */
+.prose { max-width: 78ch; margin: 0 auto; line-height: 1.95; font-size: 1.02rem; color: #334155; }
+.prose h2 {
+    font-size: clamp(1.25rem, 2.6vw, 1.6rem); color: #1a365d; font-weight: 800;
+    margin: 2.6em 0 .8em; padding-right: 16px; border-right: 4px solid #d6b256; line-height: 1.4;
+}
+.prose h3 { font-size: 1.12rem; color: #1a365d; font-weight: 800; margin: 2em 0 .6em; }
+.prose p { margin: 0 0 1.15em; }
+.prose ul, .prose ol { margin: 0 0 1.3em; padding-right: 1.4em; }
+.prose li { margin-bottom: .55em; }
+.prose strong { color: #0f2438; font-weight: 800; }
+.prose a { color: #2c5282; text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: #d6b256; }
+.prose blockquote {
+    margin: 1.8em 0; padding: 20px 24px; background: #f8fafc;
+    border-right: 4px solid #2c5282; border-radius: 0 12px 12px 0;
+    color: #1e293b; font-size: .97rem;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+
+/* ── صناديق تنبيه ── */
+.callout { border-radius: 14px; padding: 20px 24px; margin: 1.8em 0; font-size: .97rem; line-height: 1.8; }
+.callout strong { display: block; margin-bottom: 6px; font-size: 1rem; }
+.callout-info    { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a5f; }
+.callout-warn    { background: #fff7ed; border: 1px solid #fed7aa; color: #7c2d12; }
+.callout-danger  { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; }
+.callout-success { background: #f0fdf4; border: 1px solid #bbf7d0; color: #14532d; }
+
+/* ── جدول ── */
+.table-wrap { overflow-x: auto; margin: 1.8em 0; border-radius: 12px; border: 1px solid #e2e8f0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: .94rem; background: #fff; }
+.prose thead { background: #1a365d; color: #fff; }
+.prose th { padding: 13px 16px; text-align: right; font-weight: 700; white-space: nowrap; }
+.prose td { padding: 12px 16px; border-top: 1px solid #e2e8f0; text-align: right; vertical-align: top; }
+.prose tbody tr:nth-child(even) { background: #f8fafc; }
+
+/* ── شبكة بطاقات الخدمات ── */
+.svc-grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin: 2em 0; }
+.svc-card {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 24px;
+    display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.svc-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15,36,56,.12); border-color: #d6b256; }
+.svc-card h3 { margin: 0 0 10px; font-size: 1.08rem; color: #1a365d; font-weight: 800; line-height: 1.45; }
+.svc-card p { margin: 0 0 16px; font-size: .93rem; color: #64748b; line-height: 1.8; flex: 1; }
+.svc-card .meta { font-size: .82rem; font-weight: 700; color: #d6b256; margin-bottom: 12px; }
+.svc-card .go { font-size: .9rem; font-weight: 800; color: #2c5282; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.svc-card .go:hover { color: #d6b256; }
+.svc-icon { width: 46px; height: 46px; border-radius: 12px; background: #eff6ff; color: #1a365d; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.svc-icon svg { width: 24px; height: 24px; }
+
+/* ── أزرار الإجراء ── */
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 2.2em 0 0; }
+.actions .btn { text-decoration: none; }
+
+/* ── قائمة الأدلة ── */
+.guide-list { display: grid; gap: 18px; margin: 2em 0; }
+.guide-item {
+    display: block; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px;
+    padding: 24px; text-decoration: none; transition: border-color .2s, box-shadow .2s;
+}
+.guide-item:hover { border-color: #d6b256; box-shadow: 0 12px 32px rgba(15,36,56,.1); }
+.guide-item h3 { margin: 0 0 8px; color: #1a365d; font-size: 1.05rem; font-weight: 800; }
+.guide-item p { margin: 0; color: #64748b; font-size: .92rem; line-height: 1.75; }
+.guide-item .date { display: block; margin-top: 12px; font-size: .8rem; color: #94a3b8; }
+
+/* ── أسئلة شائعة ── */
+.faq-block { margin: 2.4em 0; }
+.faq-item { border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 12px; background: #fff; overflow: hidden; }
+.faq-item summary {
+    cursor: pointer; padding: 18px 22px; font-weight: 700; color: #1a365d;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 14px;
+    font-size: .98rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 1.4rem; color: #d6b256; font-weight: 400; line-height: 1; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item .ans { padding: 0 22px 20px; color: #475569; line-height: 1.9; font-size: .95rem; }
+.faq-item .ans p { margin: 0; }
+
+/* ── بطاقة CTA ── */
+.cta-inline {
+    background: linear-gradient(135deg, #0f2438, #1a365d);
+    color: #fff; border-radius: 18px; padding: 38px 34px; margin: 2.6em 0;
+    text-align: center;
+}
+.cta-inline h2 { color: #fff !important; border: 0 !important; padding: 0 !important; margin: 0 0 12px !important; }
+.cta-inline p { color: rgba(255,255,255,.85); margin: 0 0 22px; }
+.cta-inline a {
+    display: inline-block; background: #d6b256; color: #0f2438; font-weight: 800;
+    padding: 14px 34px; border-radius: 999px; text-decoration: none; font-size: .98rem;
+}
+.cta-inline a:hover { background: #f0d68a; }
+
+/* ── صفحة من نحن ── */
+.about-hero { display: flex; gap: 34px; align-items: center; flex-wrap: wrap; margin: 0 0 2em; }
+.about-hero img { width: 132px; height: 132px; border-radius: 24px; border: 3px solid #d6b256; object-fit: cover; flex-shrink: 0; }
+.about-hero .who h2 { margin: 0 0 8px; font-size: 1.4rem; color: #1a365d; }
+.about-hero .who p { margin: 0; color: #64748b; }
+
+/* ── استجابة ── */
+@media (max-width: 640px) {
+    .page-head { padding: 46px 0 40px; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .actions .btn { width: 100%; justify-content: center; text-align: center; }
+    .crumbs { font-size: .82rem; }
+    .about-hero img { width: 96px; height: 96px; }
+}
+
+/* ── الوضع الداكن للنصوص المطبوعة ── */
+@media print {
+    .navbar, .footer, .status-indicator, .scroll-top, .cta-inline, .actions { display: none !important; }
+    .prose { max-width: 100%; font-size: 11pt; }
+    .page-head { background: none; color: #000; padding: 0 0 20px; }
+    .page-head h1, .page-head .lead { color: #000; }
+}
+
+/* ── ضبط التباعد: أول عنوان في الجسم لا يحتاج هامشاً علوياً كبيراً ── */
+.prose > h2:first-child, .prose > div > h2:first-child { margin-top: 0 !important; }
+section.container { padding-top: 44px !important; }
+.page-head + section.container { padding-top: 44px !important; }

@@ -1,0 +1,147 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/",
+      "destination": "/pages/services.html",
+      "permanent": false
+    },
+    {
+      "source": "/services/",
+      "destination": "/pages/services.html",
+      "permanent": false
+    },
+    {
+      "source": "/guides",
+      "destination": "/guides/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/services",
+      "destination": "/pages/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/problems",
+      "destination": "/pages/problems.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contact",
+      "destination": "/pages/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/about",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/terms",
+      "destination": "/pages/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/privacy",
+      "destination": "/pages/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools.html",
+      "destination": "/pages/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/tools.html",
+      "destination": "/pages/services.html",
+      "permanent": true
+    }
+  ]
+}
