@@ -48,3 +48,27 @@ python3 verify.py          # فحص شامل: H1، canonical، Schema، الرو
 ## ملاحظة
 
 لا يستخدم الموقع أي أدوات تتبّع إعلانية.
+
+
+---
+
+## 🔄 تحديث 2026-11-06 — الجاذبية والتواصل وSEO
+
+### ما أُضيف
+- **شريط أيقونات التواصل الاجتماعي** في أعلى الصفحة الرئيسية (Hero) وفي صفحة التواصل وفي الفوتر — كل أيقونة برابطها الرسمي: واتساب، تيليجرام، سناب شات، إنستقرام، تيك توك، إكس، فيسبوك.
+- **زر واتساب عائم** في كل الصفحات مربوط بالرقم `+966572851032` (`https://wa.me/966572851032`) مع رسالةافتتاحية جاهزة.
+- **زر واتساب رئيسي في Hero** مع عرض الرقم، وزر اتصال `tel:` في صفحة التواصل.
+- **قسم "لماذا أبو نواف؟"** بأربع بطاقات (أخلاقيات، تقرير قبل البدء، خصوصية، استجابة سريعة) — إشارات ثقة/مصداقية.
+- **شرائح ثقة** في Hero + كرات ضوئية متحركة + خط Tajawal مع `display=swap`.
+
+### SEO — ما تم تنفيذه تقنياً
+- `ContactPoint` + `telephone: +966572851032` في Schema الخاص بـ Organization، ورابط واتساب في `sameAs`.
+- `sitemap.xml` أصبح يحتوي على `<image:image>` لكل صفحة + `xhtml:link hreflang`.
+- Meta: `google-site-verification` و`msvalidate.01` (placeholders — استبدلهما برموزك)، `og:updated_time`، `twitter:creator`، `mobile-web-app-capable`، `color-scheme`.
+- Preload لـ CSSolute وlogo مع `fetchpriority="high"`، preconnect لـ wa.me و t.me، dns-prefetch.
+- Skip-link لإمكانية الوصول، `fetchpriority`، `decoding` على الصور.
+
+### ⏳ خطوات SEO outside الكود (تحتاج حسابك)
+1. **Google Search Console**: أضف `ant.xo.je` → تحقق عبر DNS TXT أو استبدل `GOOGLE_VERIFICATION_CODE_HERE` في `build/layout.py` برمز HTML tag ثم أعد النشر. ثم أرسل `sitemap.xml`.
+2. **Bing Webmaster Tools**: نفس الشيء — استبدل `BING_VERIFICATION_CODE_HERE` ثم أرسل السitemap.
+3. **DNS**: وجّه `ant.xo.je` إلى Vercel (A: `216.198.79.1`, `64.29.17.1` + TXT `_vercel`).

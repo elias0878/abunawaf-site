@@ -364,7 +364,7 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.service-card, .feature-item, .social-card, .tool-card').forEach(function(el) {
+    document.querySelectorAll('.service-card, .feature-item, .social-card, .tool-card, .why-card, .svc-card, .guide-item').forEach(function(el) {
         observer.observe(el);
     });
 }

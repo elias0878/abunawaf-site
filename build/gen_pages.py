@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """توليد الصفحات الرئيسية والمحورية."""
 from layout import BASE, ORG, page, write, schema_faq, schema_breadcrumb
-from gen_parts import icon, crumbs, page_head, cta_block, faq_block
+from gen_parts import (icon, crumbs, page_head, cta_block, faq_block, social_bar,
+                       WHATSAPP_URL, WHATSAPP_TEXT, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS)
 from content_services import SERVICES, BY_SLUG
 from content_guides import GUIDES
 
@@ -50,10 +51,21 @@ def build_home():
             نُشرح المسار والمدة والحدود قبل البدء — بلا وعود مطلقة.
         </p>
         <div class="hero-actions">
+            <a href="{WHATSAPP_TEXT}" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+                {icon("whatsapp", 22)} واتساب الآن — <b dir="ltr">{PHONE_DISPLAY}</b>
+            </a>
             <a href="https://t.me/KSA_hack01" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-                {icon("telegram", 20)} تواصل عبر تيليجرام
+                {icon("telegram", 20)} تيليجرام @KSA_hack01
             </a>
             <a href="/pages/services.html" class="btn btn-outline btn-lg">استعراض الخدمات</a>
+        </div>
+        <div class="hero-social">
+            {social_bar("social-bar hero-social-bar", "قنواتنا الرسمية — كل الأيقونات حسابات رسمية وموثقة")}
+        </div>
+        <div class="hero-trust">
+            <span class="trust-chip">{icon("shield-check", 16)} سرية تامة — لا نخزن بياناتك</span>
+            <span class="trust-chip">{icon("lock", 16)} لا نطلب كلمات المرور أبداً</span>
+            <span class="trust-chip">{icon("clock", 16)} رد خلال دقائق في أوقات العمل</span>
         </div>
         <div class="hero-stats">
             <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">خدمات متخصصة</div></div>
@@ -70,6 +82,34 @@ def build_home():
         <div class="actions">
             <a href="/pages/services.html" class="btn btn-primary">كل الخدمات الثماني</a>
             <a href="/guides/" class="btn btn-outline">الأدلة المجانية</a>
+        </div>
+    </div>
+</section>
+
+<section class="container why-us" style="padding:0 20px 64px">
+    <div class="prose" style="max-width:80ch">
+        <h2>لماذا أبو نواف؟ — كفاءة ومصداقية قبل أي تعاقد</h2>
+    </div>
+    <div class="why-grid">
+        <div class="why-card" data-animate>
+            <div class="why-icon why-icon-gold">{icon("shield-check", 30)}</div>
+            <h3>أخلاقيات واضحة</h3>
+            <p>لا نعمل على أي حساب لا تملكه، ونطلب إثبات الملكية دائماً. هذا الالتزام يحميك من أي مشاكل قانونية.</p>
+        </div>
+        <div class="why-card" data-animate>
+            <div class="why-icon why-icon-blue">{icon("search", 30)}</div>
+            <h3>تقرير قبل البدء</h3>
+            <p>قبل أي دفعة تحصل على تقرير مكتوب: ما سنفعله، مساره، مدته المتوقعة، وحدود ما لا نستطيعه.</p>
+        </div>
+        <div class="why-card" data-animate>
+            <div class="why-icon why-icon-green">{icon("lock", 30)}</div>
+            <h3>خصوصية مضمونة</h3>
+            <p>لا نخزن بياناتك، ولا نطلب كلمات المرور أو رموز OTP في أي مرحلة. كل تواصل عبر القنوات الرسمية الموضحة.</p>
+        </div>
+        <div class="why-card" data-animate>
+            <div class="why-icon why-icon-red">{icon("bolt", 30)}</div>
+            <h3>استجابة سريعة</h3>
+            <p>واتساب وتيليجرام مفعّلان على مدار أوقات العمل. حالات الابتزاز تُعالج بأولوية حتى خارج أوقات العمل.</p>
         </div>
     </div>
 </section>
@@ -280,7 +320,9 @@ def build_problems():
 
 # ═══════════════════════════════════════════════ تواصل
 SOCIALS = [
-    ("تيليجرام", "@KSA_hack01", "https://t.me/KSA_hack01", "الأسرع — القناة الرسمية والموصى بها"),
+    ("واتساب", PHONE_DISPLAY, WHATSAPP_URL, "الأسرع للرد — متاح يومياً من 2:30م حتى 12ص"),
+    ("اتصال هاتفي", PHONE_DISPLAY, PHONE_TEL, "مباشر خلال أوقات العمل"),
+    ("تيليجرام", "@KSA_hack01", "https://t.me/KSA_hack01", "القناة الرسمية والموصى بها"),
     ("سناب شات", "ant_ceh", "https://www.snapchat.com/add/ant_ceh", "متاح"),
     ("إنستقرام", "@ksa_hack01", "https://www.instagram.com/ksa_hack01", "متاح"),
     ("تيك توك", "@ksa_hack01", "https://www.tiktok.com/@ksa_hack01", "متاح"),
@@ -294,17 +336,22 @@ def build_contact():
     path = "/pages/contact.html"
     url = BASE + path
 
-    cards = "".join(f'''<a class="svc-card" href="{url_}" target="_blank" rel="noopener">
+    def go_label(url_):
+        if url_.startswith("tel:"): return "اتصال الآن"
+        if "wa.me" in url_: return "فتح محادثة واتساب"
+        return "فتح القناة"
+    cards = "".join(f'''<a class="svc-card" href="{url_}"{" target=\"_blank\" rel=\"noopener noreferrer\"" if url_.startswith("http") else ""}>
             <h3>{name}</h3>
-            <div class="meta">{handle}</div>
+            <div class="meta" dir="ltr" style="direction:ltr;unicode-bidi:embed">{handle}</div>
             <p>{note}</p>
-            <span class="go">فتح القناة {icon("arrow", 16)}</span>
+            <span class="go">{go_label(url_)} {icon("arrow", 16)}</span>
         </a>''' for name, handle, url_, note in SOCIALS)
 
     body = f'''{crumbs([("الرئيسية", "/"), ("تواصل", None)])}
 {page_head("قنوات رسمية", "تواصل معنا",
            "هذه هي قنواتنا الرسمية الوحيدة. أي حساب يتواصل معك باسم الفريق وغير مذكور هنا ليس تابعاً لنا.")}
-<section class="container" style="padding:56px 20px">
+<div class="container" style="padding:24px 20px 0">{social_bar("social-bar contact-social-bar")}</div>
+<section class="container" style="padding:32px 20px 56px">
     <div class="svc-grid">
         {cards}
     </div>

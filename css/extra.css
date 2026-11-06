@@ -161,3 +161,238 @@
 .prose > h2:first-child, .prose > div > h2:first-child { margin-top: 0 !important; }
 section.container { padding-top: 44px !important; }
 .page-head + section.container { padding-top: 44px !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   تحسينات الجاذبية والمصداقية — 2026-11-06
+   شريط تواصل اجتماعي، زر واتساب عائم، قسم "لماذا نحن"،
+   حركات Hero، وألوان brand خاصة بكل منصة
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── رابط تخطي للمحتوى (إمكانية وصول) ── */
+.skip-link {
+    position: absolute; top: -60px; right: 16px; z-index: 300;
+    background: #1a365d; color: #fff; padding: 10px 18px; border-radius: 10px;
+    font-weight: 700; text-decoration: none; transition: top .2s ease;
+}
+.skip-link:focus { top: 12px; }
+
+/* ── أزرار عامّة ── */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    padding: 13px 26px; border-radius: 999px; font-weight: 800; font-size: .98rem;
+    text-decoration: none; border: 2px solid transparent; cursor: pointer;
+    transition: transform .2s ease, box-shadow .25s ease, background .2s ease, color .2s ease;
+    font-family: inherit;
+}
+.btn-lg { padding: 16px 32px; font-size: 1.06rem; }
+.btn:hover { transform: translateY(-2px); }
+
+/* زر واتساب أخضر متوهج */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff !important;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, .38);
+}
+.btn-whatsapp:hover {
+    box-shadow: 0 14px 34px rgba(37, 211, 102, .55);
+    transform: translateY(-3px) scale(1.02);
+}
+.btn-whatsapp b { font-weight: 900; letter-spacing: .4px; }
+
+/* ── شريط التواصل الاجتماعي ── */
+.social-bar {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.social-label {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: .86rem; font-weight: 700; color: #64748b; letter-spacing: .2px;
+}
+.social-icons { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.social-btn {
+    --brand: #1a365d;
+    width: 48px; height: 48px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #fff; color: #1a365d;
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(15, 36, 56, .08);
+    transition: transform .22s ease, background .22s ease, color .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.social-btn:hover {
+    background: var(--brand); color: #fff; border-color: var(--brand);
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 12px 26px rgba(15, 36, 56, .22);
+}
+.social-btn[style*="FFFC00"]:hover, .social-btn[style*="fffc00"]:hover { color: #111; }
+.social-btn:focus-visible { outline: 3px solid #63b3ed; outline-offset: 2px; }
+
+/* شريط التواصل داخل Hero (خلفية داكنة → زجاج) */
+.hero-social { margin: -18px 0 26px; }
+.hero-social-bar .social-label { color: rgba(255,255,255,.85); }
+.hero-social-bar .social-btn {
+    background: rgba(255,255,255,.12); color: #fff;
+    border-color: rgba(255,255,255,.25);
+    backdrop-filter: blur(8px);
+    box-shadow: none;
+}
+.hero-social-bar .social-btn:hover {
+    background: var(--brand); border-color: var(--brand); color: #fff;
+    box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+.hero-social-bar .social-btn[style*="FFFC00"]:hover { color: #111; }
+
+/* شريط التواصل في صفحة التواصل (خلفية فاتحة) */
+.contact-social-bar { padding: 6px 0 0; }
+.contact-social-bar .social-btn { width: 52px; height: 52px; }
+
+/* ── شرائح الثقة في Hero ── */
+.hero-trust {
+    display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+    margin: 0 0 34px;
+}
+.trust-chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+    color: rgba(255,255,255,.92); font-size: .84rem; font-weight: 600;
+    padding: 8px 16px; border-radius: 999px; backdrop-filter: blur(6px);
+}
+.trust-chip svg { color: #7bf1a8; }
+
+/* ── Hero: كرات ضوئية متحركة ── */
+.hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(70px);
+    z-index: 1; pointer-events: none; opacity: .55;
+}
+.hero::before {
+    width: 420px; height: 420px; background: #3182ce;
+    top: -120px; right: -80px;
+    animation: heroFloat1 9s ease-in-out infinite alternate;
+}
+.hero::after {
+    width: 360px; height: 360px; background: #d6b256;
+    bottom: -140px; left: -60px; opacity: .28;
+    animation: heroFloat2 11s ease-in-out infinite alternate;
+}
+@keyframes heroFloat1 { from { transform: translate(0,0) scale(1); } to { transform: translate(-50px,40px) scale(1.15); } }
+@keyframes heroFloat2 { from { transform: translate(0,0) scale(1); } to { transform: translate(40px,-50px) scale(1.1); } }
+
+.hero-title { text-shadow: 0 4px 24px rgba(0,0,0,.35); }
+.hero-badge { box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+.hero-stats .stat-item { transition: transform .25s ease, background .25s ease; }
+.hero-stats .stat-item:hover { transform: translateY(-5px); background: rgba(255,255,255,.16); }
+
+/* ── قسم "لماذا نحن" ── */
+.why-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    max-width: 1100px; margin: 28px auto 0; padding: 0 20px;
+}
+.why-card {
+    background: #fff; border: 1px solid #e6eaf2; border-radius: var(--border-radius-lg, 16px);
+    padding: 28px 22px; text-align: center; position: relative; overflow: hidden;
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.why-card::before {
+    content: ''; position: absolute; top: 0; right: 0; left: 0; height: 4px;
+    background: linear-gradient(90deg, #d6b256, #3182ce);
+    transform: scaleX(0); transform-origin: right; transition: transform .35s ease;
+}
+.why-card:hover { transform: translateY(-7px); box-shadow: 0 20px 44px rgba(15,36,56,.14); border-color: #d6b256; }
+.why-card:hover::before { transform: scaleX(1); }
+.why-icon {
+    width: 66px; height: 66px; margin: 0 auto 16px; border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+}
+.why-icon-gold   { background: #fdf3d7; color: #b7791f; }
+.why-icon-blue   { background: #ebf4ff; color: #2b6cb0; }
+.why-icon-green  { background: #e6f9ee; color: #128c7e; }
+.why-icon-red    { background: #fdeaea; color: #c53030; }
+.why-card h3 { margin: 0 0 10px; font-size: 1.08rem; font-weight: 800; color: #1a365d; }
+.why-card p { margin: 0; font-size: .9rem; color: #64748b; line-height: 1.8; }
+
+/* ── CTA inline (within prose) ── */
+.cta-inline {
+    margin: 40px 0 8px; padding: 34px 28px; text-align: center;
+    background: linear-gradient(135deg, #1a365d 0%, #2a4a7f 60%, #3182ce 100%);
+    border-radius: var(--border-radius-xl, 24px); color: #fff;
+    box-shadow: 0 18px 44px rgba(15,36,56,.25);
+}
+.cta-inline h2 { margin: 0 0 10px; color: #fff; font-size: 1.45rem; font-weight: 900; }
+.cta-inline p { margin: 0 0 22px; color: rgba(255,255,255,.85); line-height: 1.8; }
+.cta-inline > a:not(.btn) {
+    display: inline-block; background: #fff; color: #1a365d; font-weight: 800;
+    padding: 13px 30px; border-radius: 999px; text-decoration: none;
+}
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-actions .btn { box-shadow: 0 8px 22px rgba(0,0,0,.22); }
+.cta-actions .btn-primary { background: rgba(255,255,255,.14); border: 2px solid rgba(255,255,255,.5); color: #fff; }
+.cta-actions .btn-primary:hover { background: #fff; color: #1a365d; }
+
+/* ── بطاقات الخدمات: رفع أقوى عند hover ── */
+.svc-card { position: relative; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.svc-card:hover { transform: translateY(-7px) scale(1.015); box-shadow: 0 22px 48px rgba(15,36,56,.16); }
+
+/* ── زر واتساب العائم ── */
+.wa-float {
+    position: fixed; bottom: 22px; left: 22px; z-index: 250;
+    display: flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff; border-radius: 999px; padding: 13px;
+    box-shadow: 0 10px 30px rgba(18, 140, 126, .45);
+    text-decoration: none; transition: transform .22s ease, box-shadow .22s ease, padding .22s ease;
+}
+.wa-float:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 16px 40px rgba(18,140,126,.6); }
+.wa-float::after {
+    content: ''; position: absolute; inset: -4px; border-radius: 999px;
+    border: 2px solid rgba(37,211,102,.55); pointer-events: none;
+    animation: waPulse 2.2s ease-out infinite;
+}
+@keyframes waPulse {
+    0%   { transform: scale(1);    opacity: .9; }
+    70%  { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
+}
+.wa-float-text {
+    display: none; font-size: .78rem; line-height: 1.35; font-weight: 700; text-align: right;
+}
+.wa-float-text b { font-size: .86rem; letter-spacing: .4px; }
+@media (hover: hover) and (min-width: 768px) {
+    .wa-float:hover { padding: 13px 20px 13px 16px; }
+    .wa-float:hover .wa-float-text { display: block; }
+}
+@media (max-width: 767px) {
+    .wa-float { bottom: 18px; left: 18px; padding: 12px; }
+    .wa-float svg { width: 26px; height: 26px; }
+}
+
+/* ── التواصل الاجتماعي في الفوتر ── */
+.footer-social {
+    display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap;
+}
+.footer-social > span { font-size: .88rem; font-weight: 700; color: rgba(255,255,255,.75); }
+.footer-social .social-btn {
+    width: 38px; height: 38px; background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.16); color: #fff; box-shadow: none;
+}
+.footer-social .social-btn:hover { background: var(--brand); border-color: var(--brand); transform: translateY(-3px); }
+.footer-social .social-btn[style*="FFFC00"]:hover { color: #111; }
+.footer-social .social-btn svg { width: 17px; height: 17px; }
+.footer-contact-item { display: flex; align-items: center; gap: 10px; }
+.footer-contact-item a { color: rgba(255,255,255,.85); text-decoration: none; font-weight: 600; }
+.footer-contact-item a:hover { color: #7bf1a8; }
+
+/* ── استجابة ── */
+@media (max-width: 1024px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .hero { min-height: 0; padding: 56px 18px 48px; }
+    .hero-title { font-size: 2.1rem; }
+    .hero-actions .btn-lg { width: 100%; }
+    .social-btn { width: 44px; height: 44px; }
+    .hero-social { margin: -8px 0 22px; }
+    .trust-chip { font-size: .78rem; padding: 7px 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero::before, .hero::after, .wa-float::after { animation: none; }
+    .btn, .social-btn, .why-card, .svc-card, .wa-float { transition: none; }
+}

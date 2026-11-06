@@ -104,9 +104,15 @@ Sitemap: {base}/sitemap.xml
 
 
 def sitemap():
+    def og_for(path):
+        if path.startswith("/services/"): return "og-services.jpg"
+        if path.startswith("/guides/"):   return "og-guides.jpg"
+        return "og-default.jpg"
+
     rows = []
     for path, prio, freq in PAGES:
         loc = BASE + path
+        og = BASE + "/assets/images/" + og_for(path)
         rows.append(f"""  <url>
     <loc>{loc}</loc>
     <lastmod>{TODAY}</lastmod>
@@ -114,6 +120,11 @@ def sitemap():
     <priority>{prio}</priority>
     <xhtml:link rel="alternate" hreflang="ar-SA" href="{loc}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="{loc}"/>
+    <image:image>
+      <image:loc>{og}</image:loc>
+      <image:title>أبو نواف — أمن سيبراني وحماية خصوصية</image:title>
+      <image:caption>فريق أبو نواف السعودي للأمن السيبراني</image:caption>
+    </image:image>
   </url>""")
 
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
