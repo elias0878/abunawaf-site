@@ -111,6 +111,7 @@ def build_home():
         og_image="og-default.jpg",
         active="/",
         container=False,
+        url_override=BASE + "/",   # ← الصفحة الرئيسية canonical بدون index.html
     )
     write(path, html)
     # النسخة النظيفة: /index.html يجب أن يحوّل إلى / (انظر vercel.json)
