@@ -744,3 +744,318 @@ section[id], .channels-section, [id="faq"] { scroll-margin-top: calc(var(--navba
 /* منع شريط التمرير الأفقي في RTL: العناصر الثابتة تمتد على عرض النافذة
    بينما منطقة التخطيط تستثني شريط التمرير الرأسي (8px) */
 html { overflow-x: hidden; }
+
+/* ============================================================
+   v5 — توحيد التنسيق مع تصميم الموقع الأصلي (تبسيط + ترتيب)
+   ============================================================ */
+
+/* ── 1) ترويسة الصفحات الفرعية: نفس ترويسة الأصل ── */
+.page-head {
+    margin-top: 0;
+    padding: 54px 24px 50px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--accent);
+}
+.page-head::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2l10 3.5-10 3z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.page-head .container { position: relative; z-index: 1; max-width: 900px; }
+.page-head h1 {
+    font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+    font-weight: 800; line-height: 1.35; margin: 0 0 14px; color: #fff;
+}
+.page-head .lead {
+    font-size: clamp(.98rem, 1.6vw, 1.08rem);
+    line-height: 1.9; color: rgba(255,255,255,.88);
+    max-width: 68ch; margin: 0 auto;
+}
+.page-head .tag {
+    display: inline-block;
+    background: rgba(214, 178, 86, .18);
+    color: #f0d68a;
+    border: 1px solid rgba(214, 178, 86, .45);
+    padding: 5px 16px; border-radius: 999px;
+    font-size: .8rem; font-weight: 700; margin-bottom: 14px;
+}
+
+/* ── 2) مسار التنقل: شريط أبيض مرتب تحت الترويسة ── */
+.crumbs {
+    background: #fff;
+    border-bottom: 1px solid var(--gray-200);
+    padding: 12px 0;
+    font-size: .86rem;
+}
+.crumbs ol { justify-content: flex-start; gap: 6px; }
+.crumbs li { color: var(--gray-600); }
+.crumbs li + li::before { content: "‹"; color: var(--gray-400); }
+.crumbs a { color: var(--primary); font-weight: 600; }
+.crumbs a:hover { color: var(--accent); }
+
+/* ── 3) نص المقالات: أوضح وأسهل قراءة ── */
+.prose { max-width: 78ch; margin-inline: auto; color: var(--gray-700); font-size: 1.02rem; line-height: 1.95; }
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 {
+    font-size: 1.35rem; font-weight: 800; color: var(--primary);
+    margin-top: 2.2em; padding-bottom: 10px; border-bottom: 2px solid var(--accent-bg);
+}
+.prose h3 { font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-top: 1.8em; }
+.prose ul, .prose ol { padding-inline-start: 1.4em; }
+.prose li { margin: .45em 0; }
+.prose li::marker { color: var(--accent); font-weight: 800; }
+.prose a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--accent); }
+.prose strong { color: var(--primary); font-weight: 800; }
+.prose blockquote {
+    margin: 1.6em 0; padding: 18px 22px;
+    background: var(--accent-bg); border-inline-start: 4px solid var(--accent);
+    border-radius: 10px; color: var(--gray-800);
+}
+.prose img { border-radius: 12px; max-width: 100%; height: auto; }
+
+/* ── 4) صناديق التنبيه: ألوان واضحة وحدود ظاهرة ── */
+.callout {
+    display: block; border-radius: 12px; padding: 20px 22px;
+    margin: 1.6em 0; border: 1px solid; border-inline-start-width: 5px;
+    font-size: .96rem; line-height: 1.85;
+}
+.callout p:first-child { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-info    { background: #eff6ff; border-color: #bfdbfe; border-inline-start-color: #2563eb; color: #1e3a5f; }
+.callout-warn    { background: #fffbeb; border-color: #fde68a; border-inline-start-color: #d97706; color: #78350f; }
+.callout-danger  { background: #fef2f2; border-color: #fecaca; border-inline-start-color: #dc2626; color: #7f1d1d; }
+.callout-success { background: #f0fdf4; border-color: #bbf7d0; border-inline-start-color: #16a34a; color: #14532d; }
+.callout strong { color: inherit; }
+
+/* ── 5) الجداول ── */
+.table-wrap { overflow-x: auto; margin: 1.6em 0; border: 1px solid var(--gray-200); border-radius: 12px; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.table-wrap th {
+    background: var(--primary); color: #fff; font-weight: 700;
+    padding: 13px 16px; text-align: start; white-space: nowrap;
+}
+.table-wrap td { padding: 12px 16px; border-top: 1px solid var(--gray-200); color: var(--gray-700); }
+.table-wrap tr:nth-child(even) td { background: var(--gray-50); }
+
+/* ── 6) قائمة الأدلة: عمودان مرتّبان ── */
+.guide-list {
+    display: grid; gap: 16px; margin: 0;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+.guide-item {
+    display: block; position: relative;
+    background: #fff; border: 1px solid var(--gray-200); border-radius: 14px;
+    padding: 22px 24px 20px;
+    text-decoration: none;
+    transition: border-color .18s, box-shadow .18s, transform .18s;
+}
+.guide-item::before {
+    content: ""; position: absolute; inset-inline-start: 0; top: 14px; bottom: 14px;
+    width: 4px; border-radius: 4px; background: var(--accent); opacity: .0;
+    transition: opacity .18s;
+}
+.guide-item:hover { border-color: var(--accent); box-shadow: 0 12px 28px rgba(15,36,56,.10); transform: translateY(-2px); }
+.guide-item:hover::before { opacity: 1; }
+.guide-item h3 { margin: 0 0 8px; color: var(--primary); font-size: 1.02rem; font-weight: 800; line-height: 1.55; }
+.guide-item p { margin: 0; color: var(--gray-600); font-size: .9rem; line-height: 1.8; }
+.guide-item .date {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 14px; font-size: .78rem; color: var(--gray-400);
+    background: var(--gray-50); border-radius: 999px; padding: 4px 12px;
+}
+
+/* ── 7) صناديق المحتوى (من نحن، الخصوصية، الخدمات) ── */
+.content-card {
+    background: #fff; border: 1px solid var(--gray-200); border-radius: 16px;
+    padding: 34px 32px; box-shadow: var(--shadow); margin-bottom: 24px;
+}
+@media (max-width: 640px) { .content-card { padding: 24px 20px; } }
+.about-hero { gap: 26px; }
+.about-hero img { width: 116px; height: 116px; border-radius: 20px; border: 3px solid var(--accent); }
+.about-hero .who h2 { font-size: 1.3rem; color: var(--primary); }
+
+/* ── 8) نداء التواصل: زرّان واضحان ── */
+.cta-inline { border-radius: 16px; padding: 34px 26px; margin: 2.4em auto; max-width: 780px; }
+.cta-inline h2 { font-size: 1.35rem !important; }
+.cta-inline .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-inline a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #d6b256; color: #0f2438; font-weight: 800;
+    padding: 13px 26px; border-radius: 999px; text-decoration: none; font-size: .95rem;
+    border: 2px solid #d6b256;
+}
+.cta-inline a:hover { background: #f0d68a; border-color: #f0d68a; }
+.cta-inline a.wa { background: #1f9d55; border-color: #1f9d55; color: #fff; }
+.cta-inline a.wa:hover { background: #17864a; border-color: #17864a; }
+
+/* ── 9) توحيد أزرار الموقع ── */
+.btn { border-radius: 999px; font-weight: 700; }
+.btn-outline { border-width: 1.5px; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #0f2438; }
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #0f2438; }
+
+/* ── 10) بطاقات الخدمات: نص أوضح ── */
+.service-card p { color: var(--gray-600); line-height: 1.85; }
+.service-duration { font-weight: 800; }
+
+/* ── 11) الجوال: تبسيط ── */
+@media (max-width: 768px) {
+    .page-head { padding: 40px 18px 36px; }
+    .crumbs { font-size: .8rem; }
+    .guide-list { grid-template-columns: 1fr; }
+    .prose { font-size: .98rem; }
+}
+
+/* ── 12) تصحيح بطاقة «من نحن» والصور ── */
+.about-hero {
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    background: #fff; border: 1px solid var(--gray-200); border-radius: 16px;
+    padding: 26px 28px; margin: 0 0 2em; box-shadow: var(--shadow);
+}
+.about-hero img {
+    width: 96px; height: 96px; object-fit: contain;
+    background: var(--gray-50); padding: 8px;
+    border-radius: 16px; border: 2px solid var(--gray-200);
+    flex-shrink: 0;
+}
+.about-hero .who { min-width: 0; flex: 1 1 260px; }
+.about-hero .who h2 {
+    margin: 0 0 6px !important; padding: 0 !important; border: 0 !important;
+    font-size: 1.25rem !important; color: var(--primary);
+}
+.about-hero .who p { margin: 0; color: var(--gray-600); font-size: .92rem; line-height: 1.8; }
+
+/* عناوين الأقسام داخل المقالات: بلا خطوط زائدة على الجوال */
+@media (max-width: 640px) {
+    .about-hero { padding: 20px; }
+    .about-hero img { width: 76px; height: 76px; }
+}
+
+/* ── 13) شبكة الحسابات الرسمية: 4×2 مرتّبة ومتساوية ── */
+.social-grid-lg {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 980px;
+    gap: 14px;
+}
+.social-card {
+    min-height: 132px;
+    padding: 20px 14px;
+    border-radius: 14px;
+    text-align: center;
+    justify-content: center;
+}
+.social-card.featured {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #fffdf5, #fff);
+}
+.social-card > span:first-of-type { font-weight: 800; color: var(--primary); font-size: .93rem; }
+.social-card .social-sub { font-size: .74rem; color: var(--gray-500); }
+@media (max-width: 900px) { .social-grid-lg { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .social-grid-lg { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .social-card { min-height: 112px; padding: 16px 10px; } }
+
+/* ── 14) الأسئلة الشائعة: حدود واضحة وحركة ── */
+.faq-item, .accordion-item {
+    background: #fff;
+    border: 1px solid var(--gray-200) !important;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: border-color .15s, box-shadow .15s;
+}
+.faq-item:hover, .accordion-item:hover { border-color: var(--accent) !important; box-shadow: 0 6px 18px rgba(15,36,56,.07); }
+.faq-item summary, .accordion-header {
+    background: #fff;
+    font-weight: 700;
+    color: var(--primary);
+}
+.faq-item[open] summary { color: var(--primary); background: var(--accent-bg); }
+.faq-item .ans { color: var(--gray-700); }
+
+/* ── 15) بطاقات «مشكلات وحلول» ── */
+.problems-grid .problem-card,
+.problems-preview-grid .problem-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 14px;
+    background: #fff;
+    transition: border-color .18s, box-shadow .18s, transform .18s;
+}
+.problems-grid .problem-card:hover,
+.problems-preview-grid .problem-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 12px 26px rgba(15,36,56,.09);
+    transform: translateY(-3px);
+}
+
+/* ── 16) قائمة «مشكلات وحلول» في الرئيسية: صفوف واضحة ── */
+.problems-list-preview { max-width: 860px; margin: 0 auto; display: grid; gap: 12px; }
+.problem-preview-item {
+    display: flex; align-items: center; gap: 16px;
+    background: #fff; border: 1px solid var(--gray-200); border-radius: 14px;
+    padding: 18px 20px; text-decoration: none;
+    transition: border-color .16s, box-shadow .16s, transform .16s;
+}
+.problem-preview-item:hover {
+    border-color: var(--accent); transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15,36,56,.09);
+}
+.problem-preview-icon {
+    width: 46px; height: 46px; flex-shrink: 0;
+    border-radius: 12px; display: grid; place-items: center;
+    background: var(--accent-bg); color: var(--accent);
+}
+.problem-preview-icon svg { width: 22px; height: 22px; }
+.problem-preview-content { flex: 1 1 auto; min-width: 0; }
+.problem-preview-content h4 { margin: 0 0 4px; font-size: .96rem; font-weight: 800; color: var(--primary); }
+.problem-preview-content p { margin: 0; font-size: .85rem; color: var(--gray-600); line-height: 1.7; }
+.problem-preview-arrow { width: 18px; height: 18px; flex-shrink: 0; color: var(--gray-400); }
+.problem-preview-item:hover .problem-preview-arrow { color: var(--accent); }
+
+/* ── 17) صفحة التواصل: صفوف واضحة وأزرار مفهومة ── */
+.contact-grid { align-items: start; }
+.contact-info-card, .contact-info-card + * {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: var(--shadow);
+}
+.contact-info-card h3 {
+    font-size: 1.05rem; color: var(--primary); font-weight: 800;
+    margin: 0 0 10px; padding-bottom: 14px;
+    border-bottom: 2px solid var(--accent-bg);
+    display: flex; align-items: center; gap: 8px;
+}
+.contact-method {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 10px; margin: 0 -10px;
+    border-bottom: 1px solid var(--gray-100);
+    border-radius: 10px;
+    transition: background .15s;
+}
+.contact-method:hover { background: var(--gray-50); padding-inline-start: 14px; }
+.contact-method:last-child { border-bottom: none; }
+.contact-method-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: #e8f0fb; color: var(--primary);
+    display: grid; place-items: center; flex-shrink: 0;
+}
+.contact-method-icon svg { width: 22px; height: 22px; color: currentColor; }
+.contact-method-wa .contact-method-icon { background: #e7f8ee; color: #1a8a4c; }
+.contact-method-info { min-width: 0; }
+.contact-method-info strong { display: block; color: var(--primary); font-size: .93rem; font-weight: 800; margin-bottom: 3px; }
+.contact-method-info a {
+    color: #1e6fbf; font-size: .88rem; text-decoration: none; font-weight: 600;
+    word-break: break-word;
+}
+.contact-method-info a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ── 18) تحسين التباين للنصوص الثانوية ── */
+.guide-item .date { color: #5b6b7f; background: #eef2f7; font-weight: 600; }
+.page-dates, .article-meta, .meta { color: #5b6b7f !important; }
+.social-card .social-sub { color: #5b6b7f; }
+

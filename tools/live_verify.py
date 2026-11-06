@@ -43,7 +43,7 @@ for p in paths:
         bad.append(f"{p} → {st}")
     print(f"  {flag} {p:<52} {st}  {ct.split(';')[0]:<28} {len(body):>7,}b")
     if p == "/":
-        for need in ["socialbar", "hero-social", "channels-section", "m-dock", "wa.me/966572851032"]:
+        for need in ["socialbar", "social-top", "social-card", "m-dock", "wa.me/966572851032", "terms-section" if False else "faq"]:
             if need in body:
                 ok.append(f"index يحتوي {need}")
             else:
@@ -108,7 +108,7 @@ g = json.loads(gr.group(1))["@graph"]
 types = ["+".join(x["@type"]) if isinstance(x["@type"], list) else x["@type"] for x in g]
 print("\n── البيانات المنظّمة " + "─" * 37)
 print("  ", " · ".join(types))
-for need in ("Organization", "WebSite", "WebPage", "BreadcrumbList", "FAQPage", "Person"):
+for need in ("Organization", "WebSite", "WebPage", "FAQPage", "Person", "ItemList"):
     if need not in types:
         bad.append(f"schema: {need} مفقود")
 
